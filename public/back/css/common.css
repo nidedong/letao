@@ -139,3 +139,7 @@ td{
 .lt-content .table td {
     vertical-align: middle;
 }
+
+.btn-addCate {
+    margin-bottom: 20px;
+}
