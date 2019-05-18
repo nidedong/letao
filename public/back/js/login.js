@@ -47,7 +47,7 @@ $(function() {
           stringLength: {
             min: 6,
             max: 30,
-            message: '用户名长度必须在6到30之间'
+            message: '密码长度必须在6到30之间'
           },
           //正则校验
           regexp: {

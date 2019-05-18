@@ -131,3 +131,11 @@ a.active {
 .breadcrumb {
     margin: 20px 0;
 }
+
+.lt-content th,
+td{
+    text-align: center;
+}
+.lt-content .table td {
+    vertical-align: middle;
+}
