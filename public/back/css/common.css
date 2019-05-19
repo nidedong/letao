@@ -31,6 +31,9 @@ ul {
 .red {
     color: red;
 }
+.mgb-20 {
+    margin-bottom: 20px;
+}
 /*侧边栏*/
 .lt-aside {
     z-index: 999;
