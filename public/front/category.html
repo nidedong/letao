@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/common.css">
-
+  <link rel="stylesheet" href="./css/category.css">
 </head>
 <body>
 <div class="lt_container">
@@ -21,7 +21,27 @@
 
   <!--主体部分-->
   <div class="lt_main">
-    category
+    <div class="main_left">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--这里放置真实显示的DOM内容-->
+          <ul>
+            <!--模板渲染-->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main_right">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!--这里放置真实显示的DOM内容-->
+          <ul>
+            <!--模板渲染-->
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!--底部-->
@@ -55,8 +75,32 @@
   </div>
 </div>
 
+
+<!--模板-->
+<script id="firstTpl" type="text/html">
+  {{ each rows v i }}
+    <li><a href="javascript:;" class="{{ i === 0 ? 'current' : ''}}" data-id="{{ v.id }}">{{ v.categoryName }}</a></li>
+  {{ /each }}
+</script>
+
+<script id="secondTpl" type="text/html">
+  {{ if rows.length === 0 }}
+    <p style="font-size: 16px;">没有更多信息了</p>
+  {{ else }}
+    {{ each rows v i }}
+    <li>
+      <a href="javascript:;">
+        <img src="{{ v.brandLogo }}" alt="">
+        <p>{{ v.brandName }}</p>
+      </a>
+    </li>
+    {{ /each }}
+  {{ /if }}
+</script>
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
 </body>
 </html>
