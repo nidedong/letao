@@ -153,13 +153,16 @@ $(function() {
     dataType: "json",
     done: function( a, data ) {
       imgArr.unshift( data.result );
-      console.log( imgArr );
-      $('.imgBox').prepend('<img src=' + data.result.picAddr + ' height="100">');
       if( imgArr.length > 3 ) {//使上传的图片数量限制在三张
+        console.log( imgArr.length );
         $('.imgBox img:last-of-type').remove();
         imgArr.pop();
+      }
+      if( imgArr.length === 3 ) {
         $('#form').data('bootstrapValidator').updateStatus('imgNum', 'VALID');
       }
+      console.log( imgArr );
+      $('.imgBox').prepend('<img src=' + data.result.picAddr + ' height="100">');
     }
   })
 
@@ -181,7 +184,7 @@ $(function() {
         console.log( info );
         currentPage = 1;
         render();
-        $('product-modal').modal('hide');
+        $('.product-modal').modal('hide');
         $('#form').data('bootstrapValidator').resetForm(true);
         $('#chose').text("请选择二级分类");
         $('.imgBox img').remove();

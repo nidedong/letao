@@ -1,0 +1,48 @@
+.lt_sort {
+    height: 30px;
+    background-color: #EEEEEE;
+}
+.lt_sort a {
+    display: block;
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    text-align: center;
+    font-size: 12px;
+    float: left;
+}
+.lt_sort a.current {
+    color: orange;
+}
+
+/*产品样式*/
+.lt_product {
+    padding: 10px;
+
+}
+.lt_product li{
+    float: left;
+    width: 48%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.lt_product li:nth-child(2n+1) {
+    margin-right: 4%;
+}
+.lt_product li a {
+    display: block;
+    text-align: center;
+}
+.lt_product li img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+.lt_product .oldPrice {
+    text-decoration: line-through;
+}
+.lt_product .price {
+    color: red;
+}

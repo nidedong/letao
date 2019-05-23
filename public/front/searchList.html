@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/searchList.css">
 </head>
 <body>
 <div class="lt_container">
@@ -16,7 +16,7 @@
   <div class="lt_header">
     <!--返回上一页-->
     <a href="javascript: history.back();" class="home"><i class="mui-icon mui-icon-back"></i></a>
-    <h3>搜索中心</h3>
+    <h3>商品列表</h3>
   </div>
 
   <!--主体部分-->
@@ -29,7 +29,15 @@
           <button class="mui-btn mui-btn-primary search_btn">搜索</button>
         </div>
 
-        <div class="lt_history">
+        <div class="lt_sort">
+          <a href="javascript:;">上架时间<i class="fa fa-angle-down"></i></a>
+          <a href="javascript:;" data-sort="price">价格<i class="fa fa-angle-down"></i></a>
+          <a href="javascript:;" data-sort="num">库存<i class="fa fa-angle-down"></i></a>
+          <a href="javascript:;">折扣<i class="fa fa-angle-down"></i></a>
+        </div>
+
+        <!--产品模块-->
+        <div class="lt_product">
           <!--模板渲染-->
         </div>
       </div>
@@ -70,30 +78,27 @@
 
 
 <!--模板-->
-<script type="text/html" id="historyTpl">
-  {{ if arr.length === 0 }}
-    <p>没有更多数据了</p>
-  {{ else }}
-    <div class="title mui-clearfix">
-      <span class="mui-pull-left">搜索历史</span>
-      <span class="mui-pull-right btn_empty"><i class="fa fa-trash"></i>清空记录</span>
-    </div>
-    <div class="content">
-      <ul>
-        {{ each arr v i }}
-        <li>
-          <a href="./searchList.html?key={{ v }}" class="mui-pull-left key">{{ v }}</a>
-          <i class="mui-icon mui-icon-closeempty mui-pull-right btn_del" data-index="{{ i }}"></i>
-        </li>
-        {{ /each }}
-      </ul>
-    </div>
-  {{ /if }}
+<script type="text/html" id="productTpl">
+  <ul>
+    {{ each data v i }}
+      <li>
+        <a href="javascript:;">
+          <img src="{{ v.pic[0].picAddr }}" alt="">
+          <p class="mui-ellipsis-2">{{ v.proName }}</p>
+          <p>
+            <span class="price">￥{{ v.price }}</span>
+            <span class="oldPrice">￥{{ v.oldPrice}}</span>
+          </p>
+          <button class="mui-btn mui-btn-primary">立即购买</button>
+        </a>
+      </li>
+    {{ /each }}
+  </ul>
 </script>
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/search.js"></script>
+<script src="./js/searchList.js"></script>
 </body>
 </html>

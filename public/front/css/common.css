@@ -88,3 +88,20 @@ body {
     overflow: hidden;
     position: relative;
 }
+
+/*公共search部分*/
+.lt_search {
+    padding: 10px 10px 0 10px;
+    position: relative;
+}
+.lt_search .search_input {
+    border-color: #007aff;
+    height: 34px;
+    font-size: 14px;
+}
+.lt_search .search_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border-radius: 0 5px 5px 0;
+}

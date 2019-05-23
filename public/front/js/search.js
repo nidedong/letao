@@ -1,9 +1,11 @@
 $(function() {
+  // 假数据
   // var arr = ['张飞覅', '李四', '王五', '二哈', '久久', '七七'];
   // var jsonStr = JSON.stringify( arr );
   // console.log( jsonStr );
   // localStorage.setItem("search_list", jsonStr);
 
+  
   // 渲染搜索历史思路
   // 1.从本地存储获取搜索历史列表
   // 2.将获取的json字符串转换成数组
@@ -80,5 +82,7 @@ $(function() {
     localStorage.setItem("search_list", jsonStr);
     render();
     $(".search_input").val("");
+    location.href = "./searchList.html?key=" + text;
   })
+  
 })
