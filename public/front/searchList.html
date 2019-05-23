@@ -38,6 +38,7 @@
 
         <!--产品模块-->
         <div class="lt_product">
+
           <!--模板渲染-->
         </div>
       </div>
@@ -79,8 +80,8 @@
 
 <!--模板-->
 <script type="text/html" id="productTpl">
-  <ul>
-    {{ each data v i }}
+    <ul>
+      {{ each data v i }}
       <li>
         <a href="javascript:;">
           <img src="{{ v.pic[0].picAddr }}" alt="">
@@ -92,8 +93,8 @@
           <button class="mui-btn mui-btn-primary">立即购买</button>
         </a>
       </li>
-    {{ /each }}
-  </ul>
+      {{ /each }}
+    </ul>
 </script>
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
