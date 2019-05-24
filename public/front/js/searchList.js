@@ -110,4 +110,5 @@ $(function() {
     }
     mui('.mui-scroll-wrapper').pullRefresh().pulldownLoading();
   })
+  
 })
