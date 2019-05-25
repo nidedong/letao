@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <style>
+    .box {
+      width: 50%;
+      height: 50px;
+      background-color: red;
+    }
+    .mainBox {
+      overflow: hidden;
+      background-color: pink;
+      height: 50px;
+    }
+    .table {
+      background-color: blue;
+      height: 50px;
+
+    }
+  </style>
+</head>
+<body>
+<!-- 侧滑导航根容器 -->
+<div class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+  <!-- 菜单容器 -->
+  <aside class="mui-off-canvas-right">
+    <div class="mui-scroll-wrapper">
+      <div class="mui-scroll">
+        <!-- 菜单具体展示内容 -->
+        <div class="box">1231</div>
+      </div>
+    </div>
+  </aside>
+  <!-- 主页面容器 -->
+  <div class="mui-inner-wrap">
+    <!-- 主页面标题 -->
+    <!--<header class="mui-bar mui-bar-nav">-->
+      <!--<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>-->
+      <!--<h1 class="mui-title">标题</h1>-->
+    <!--</header>-->
+    <div class="mui-content mui-scroll-wrapper">
+      <div class="mui-scroll">
+        <!-- 主界面具体展示内容 -->
+        <div class="mainBox"></div>
+        <div class="table"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./lib/mui/js/mui.js"></script>
+</body>
+</html>

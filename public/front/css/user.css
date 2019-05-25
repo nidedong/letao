@@ -1,0 +1,21 @@
+.item_box {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc
+}
+.lt_user {
+    padding-left: 10px;
+}
+.lt_user img {
+    display: block;
+    width: 42px;
+    margin-right: 10px;
+}
+.lt_user p {
+    margin: 0;
+}
+.lt_logout {
+    padding: 10px;
+}
+.lt_logout button {
+    width: 100%;
+}

@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no,
    initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>会员中心</title>
+  <title>登陆</title>
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/user.css">
 </head>
 <body>
 <div class="lt_container">
@@ -35,23 +34,20 @@
       <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
           <!--这里放置真实显示的DOM内容-->
-          <div class="lt_user">
-            <div class="userInfo item_box mui-clearfix">
-              <!--模板渲染-->
+          <form class="mui-input-group">
+            <div class="mui-input-row">
+              <label>用户名</label>
+              <input type="text" class="mui-input-clear username" placeholder="请输入用户名" name="username">
             </div>
-
-            <div class="safe item_box">
-              账号安全
+            <div class="mui-input-row">
+              <label>密码</label>
+              <input type="password" class="mui-input-password password" placeholder="请输入密码" name="password">
             </div>
-
-            <div class="myCart item_box">我的购物车</div>
-
-            <div class="address item_box">收货地址管理</div>
-          </div>
-
-          <div class="lt_logout">
-            <button class="mui-btn btn-logout">退出</button>
-          </div>
+            <div class="mui-button-row">
+              <button type="button" class="mui-btn mui-btn-primary btn_login" >登陆</button>
+              <button type="reset" class="mui-btn mui-btn-danger" >重置</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -90,18 +86,11 @@
 
 
 <!--模板-->
-<!--用户信息模板-->
-<script id="userTpl" type="text/html">
-  <img src="./images/user.jpg" alt="" class="mui-pull-left">
-  <div class="details mui-pull-left">
-    <p>{{ username }}</p>
-    <p>绑定手机: {{ mobile }}</p>
-  </div>
-</script>
+
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/user.js"></script>
+<script src="./js/login.js"></script>
 </body>
 </html>
